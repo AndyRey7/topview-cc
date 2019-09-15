@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import BikeContainer from './BikeContainer';
+import RentalForm from './RentalForm';
 import './App.css';
 
 class App extends Component {
@@ -15,10 +17,13 @@ class App extends Component {
             }, () => console.log('this is state', this.state.bikes))
         })
     }
+
+
   render(){
       return (
           <div>
-          Hello
+          <RentalForm />
+          <div><BikeContainer bikes={this.state.bikes} /></div>
           </div>
       )
   }
